@@ -1,0 +1,110 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - book_a_ground
+  - duytan
+  - time
+  - date_info
+  - bot_challenge
+  - san7
+  - san5
+  - ask_available_ground
+  - ask_another_services
+  - inform
+  - ask_weather
+  - city
+  - view_products
+
+entities: 
+  - choice
+
+slots:
+  choice:
+    type: categorical
+    values: 
+      - áo thể thao
+      - quần thể thao
+      - giày thể thao
+      
+    mappings:
+    - type: from_entity
+      entity: choice
+
+
+
+responses:
+  utter_greet:
+  - text: "Xin chào bạn! Tôi là trợ lý ảo Rasa."
+
+  utter_ask_customer:
+  - text: "Tôi có thể giúp gì cho bạn?"
+
+  utter_ask_choose_ground: 
+  - text: "Bạn muốn thuê ở sân nào?"
+
+  utter_ask_choose_time:
+  - text: "Bạn muốn thuê lúc mấy giờ?"
+
+  utter_ask_choose_date:
+  - text: "Bạn muốn thuê ngày nào?"
+
+  utter_show_available_ground:
+  - text: "Còn 1 sân 5 và 1 sân 7 chưa được thuê."
+
+  utter_ask_choose_size_ground:
+  - text: "Bạn muốn thuê sân 5 hay sân 7?"
+    buttons:
+    - title: "Sân 5"
+      payload: /san5
+    - tille: "Sân 7"
+      payload: /san7
+
+  utter_ask_confirm:
+  - text: "Bạn muốn thuê sân 7 Duy Tân 
+  vào lúc 5 giờ chiều ngày mai phải không?"
+
+  utter_confirm:
+  - text: "Bạn đã thuê sân 7 Duy Tân 
+  vào lúc 5 giờ chiều ngày mai."
+
+  utter_ask_choose_services:
+  - text: "Chúng tôi hiện có dịch vụ bán đồ thể thao online và tính năng dự báo thời tiết? Bạn muốn dùng cái nào?"
+
+  utter_list_category:
+  - text: "Đây là danh mục sản phẩm: 'áo thể thao' và 'quần thể thao'. Nhập tên danh mục sản phẩm bạn muốn mua:"
+  
+  utter_ask_another_request:
+  - text: "Bạn cần gì nữa không?"
+
+  utter_ask_city:
+    - text: "Bạn muốn xem thời tiết tại đâu?"
+
+  utter_show_temp:
+    - text: "Nhiệt độ hiện tại là {temp} độ C."
+
+
+  utter_goodbye:
+  - text: "Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi. 
+  Chúc bạn một ngày tốt lành."
+
+  utter_iamabot:
+  - text: "Tôi là robot."
+
+
+
+actions: 
+  - action_football_products
+  - action_weather
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+

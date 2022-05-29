@@ -1,0 +1,195 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - chào bạn
+    - chào buổi sáng
+    - chào buổi tối
+    - xin chào
+    - chào
+    - có ai ở đây không
+    - ai đó giúp tôi với
+    - tôi cần giúp đỡ
+    - alo
+    - alo alo
+  
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - gặp sau nhé
+    - tôi sẽ liên hệ lại
+    - tôi sẽ nhắn tin lại
+    - tôi bận rồi
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - pp
+    - baibai
+    - bai bai
+    - see you
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - đúng thế
+    - đúng
+    - vâng
+    - ok
+    - okey
+    - oki
+    - okay
+    - uki
+    - đúng
+    - tôi thích
+    - được đấy
+    - tốt thôi
+    - ổn đấy
+    - phải
+    - đúng vậy
+    - phải rồi
+    
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - không 
+    - không được
+    - không ổn
+    - tôi không thích
+    - ko
+    - k
+
+- intent: book_a_ground
+  examples: |
+    - tôi muốn đặt một sân bóng
+    - tôi muốn book sân bóng
+    - tôi muốn thuê sân bóng
+    - đặt sân bóng
+    - book sân bóng
+    - thuê sân bóng
+
+- intent: duytan
+  examples: |
+    - sân Duy Tân
+    - Duy Tân
+
+
+- intent: time
+  examples: |
+    - 5h
+    - 5 giờ
+    - 5 giờ chiều
+    - 5 pm
+    - 5pm
+    - 17 giờ
+    - 5h chiều
+
+- intent: date_info
+  examples: |
+    - ngày mai
+    - mai
+    - chiều mai
+
+- intent: ask_available_ground
+  examples: |
+    - sân nào trống
+    - sân nào còn chỗ
+    - sân nào chưa ai đặt
+    - sân nào chưa ai thuê
+
+- intent: san7
+  examples: |
+    - sân 7
+    - 7
+
+- intent: san5
+  examples: |
+    - sân 5
+    - 5
+
+- intent: ask_weather
+  examples: |
+    - thời tiết hôm nay thế nào
+    - thời tiết
+    - trời hôm nay thế nào
+    - nhiệt độ bao nhiêu
+    - nhiệt độ hôm nay là bao nhiêu
+    - thời tiết hôm nay
+    - nhiệt độ hôm nay
+    - xem thời tiết
+    - xem nhiệt độ
+
+- intent: ask_another_services
+  examples: |
+    - bên bạn có bán gì không
+    - bên bạn còn dịch vụ gì không
+    - bên bạn có bán áo quần không
+    - bên bạn có bán đồ thể thao không
+    - còn dịch vụ gì nữa không
+    - còn gì nữa không
+    - có gì khác không
+    - bên bạn còn tính năng nào không
+    - còn tính năng gì không
+    - có tính năng nào không
+    - còn tính năng khác không
+
+- intent: view_products
+  examples: |
+    - mua áo quần
+    - mua đồ thể thao
+    - xem áo
+    - xem quần
+    - xem thời trang
+    - xem shop
+    - xem hàng
+    - xem áo thể thao
+    - xem quần thể thao
+    - bán áo quần
+    - bán quần áo
+
+- intent: bot_challenge
+  examples: |
+    - bạn là người hay robot
+    - bạn là người hả
+    - bạn là robot hả
+    - bạn có phải là robot không
+    - bạn có phải là con người không
+    - tôi đang nói chuyện với bot hả
+    - tôi đang nói chuyện với rotbot hả
+    - tôi đang nói chuyện với người hả
+    - tôi đang nói chuyện với con người hả
+
+- intent: inform
+  examples: |
+    - [áo thể thao](choice)
+    - [quần thể thao](choice)
+    - [giày thể thao](choice)
+
+- intent: city
+  examples: |
+    - hoi an
+    - hội an
+    - đà nẵng
+    - da nang
+    - danang
+    - hoian
